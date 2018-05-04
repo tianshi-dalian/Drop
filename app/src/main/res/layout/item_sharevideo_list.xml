@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp">
+    <RelativeLayout
+        android:id="@+id/det"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/uPic_item"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/uName_item"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/uPic_item"
+            android:gravity="center"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/createTime_item"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/uName_item"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/textView_share_title"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/uName_item" />
+
+        <VideoView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView_share_title"
+            android:layout_weight="1"
+            android:scaleType="fitXY" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/det"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f2f2f2" />
+
+
+
+</RelativeLayout>

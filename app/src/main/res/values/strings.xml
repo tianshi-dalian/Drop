@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Drop</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="live">直播间</string>
+    <string name="m_v">音频</string>
+    <string name="friend">滴友圈</string>
+    <string name="my">我的</string>
+
+    <string name="video">视频</string>
+    <string name="music">音乐</string>
+
+    <string name="mv_online_music">在线音乐</string>
+    <string name="mv_local_music">本地音乐</string>
+    <string name="mv_local_video">本地视频</string>
+
+    <string name="friend_video">视频</string>
+    <string name="friend_pic">图片</string>
+    <string name="friend_text">段子</string>
+
+    <string name="friend_name">主题</string>
+
+    <string name="myCollect">我的关注</string>
+    <string name="myAttention">我的收藏</string>
+    <string name="myFans">我的粉丝</string>
+    <string name="myIssue">我的发布</string>
+    <string name="mySetting">退出程序</string>
+
+    <string name="Register">注册</string>
+    <string name="Login">登录</string>
+    <string name="noLogin">跳过登录</string>
+    <string name="cancel">取消</string>
+    <string name="back">返回登录</string>
+    <string name="hintPassword">请输入密码</string>
+    <string name="hintPassword2">请确认密码</string>
+    <string name="hintUName">请输入昵称</string>
+    <string name="hintTelephone">请输入账号</string>
+
+    <string name="u_Name">昵称：</string>
+    <string name="u_Telephone">账号：</string>
+
+    <string name="follow_user">用户</string>
+    <string name="follow_tips">说说</string>
+    <string name="follow_music">音乐</string>
+    <string name="follow_video">视频</string>
+
+    <string name="account">1234567890</string>
+
+    <string name="liveTitle">直播主题</string>
+    <string name="welcome">快乐，从点滴分享开始</string>
+</resources>

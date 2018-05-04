@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFEFD5"
+    tools:context="com.qhp334.drop.fragment.FriendFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/search_friend"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_search" />
+
+        <Button
+            android:id="@+id/issue_friend"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/ic_issue" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/FRadioGroup"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--<RadioButton-->
+            <!--android:id="@+id/radio_video"-->
+            <!--android:text="@string/friend_video"-->
+            <!--style="@style/Friend"/>-->
+        <RadioButton
+            android:id="@+id/radio_share"
+            android:text="@string/friend_pic"
+            style="@style/Friend" />
+        <RadioButton
+            android:id="@+id/radio_text"
+            android:text="@string/friend_text"
+            style="@style/Friend" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/liner"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@+id/FRadioGroup"
+        android:gravity="center"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/ll_video_color"
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="@color/Checked"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+        <LinearLayout
+
+            android:id="@+id/ll_share_color"
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="@color/unChecked"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_text_color"
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:layout_weight="1"
+            android:background="@color/unChecked"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    <FrameLayout
+        android:id="@+id/fragment_friendHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/liner"
+        android:layout_marginTop="0dp" >
+    </FrameLayout>
+
+
+
+</LinearLayout>

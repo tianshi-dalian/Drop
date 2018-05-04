@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back3"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.qhp334.drop.fragment.MyFragment">
+
+    <LinearLayout
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/uPic_my"
+                android:layout_width="120dp"
+                android:layout_height="120dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/uName_my"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/telephone_my"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#f2f2f2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <Button
+            android:gravity="center_vertical"
+            android:id="@+id/mod_user"
+            style="@style/My"
+            android:text="修改个人信息" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#f2f2f2" />
+
+        <Button
+            android:gravity="center_vertical"
+            android:id="@+id/collect_my"
+            style="@style/My"
+            android:text="@string/myAttention" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#f2f2f2" />
+        <Button
+            android:gravity="center_vertical"
+            android:id="@+id/myFans"
+            style="@style/My"
+            android:text="@string/myFans" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#f2f2f2" />
+        <Button
+            android:gravity="center_vertical"
+            android:id="@+id/myIssue"
+            style="@style/My"
+            android:text="@string/myIssue" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#f2f2f2" />
+        <Button
+            android:gravity="center_vertical"
+            android:id="@+id/myExit"
+            style="@style/My"
+            android:text="@string/mySetting" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#f2f2f2" />
+    </LinearLayout>
+
+</LinearLayout>

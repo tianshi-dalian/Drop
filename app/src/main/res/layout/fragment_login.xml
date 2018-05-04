@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp"
+    android:paddingTop="16dp"
+    tools:context="com.qhp334.drop.fragment.LoginFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textSize="40sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/telephone_login"
+            style="@style/LoginEdit"
+            android:drawableLeft="@drawable/ic_user"
+            android:hint="@string/hintTelephone" />
+
+        <EditText
+            android:id="@+id/password_login"
+            style="@style/LoginEdit"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_password"
+            android:hint="@string/hintPassword" />
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/shape_button"
+            android:text="@string/Login" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/noLogin_login"
+            style="@style/LoginButton"
+            android:gravity="left"
+            android:text="@string/noLogin" />
+
+        <Button
+            android:id="@+id/register_button"
+            style="@style/LoginButton"
+            android:gravity="right"
+            android:text="@string/Register" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/weChat"
+            style="@style/thirdParty"
+            android:src="@drawable/ic_wechat" />
+
+        <ImageView
+            android:id="@+id/qq"
+            style="@style/thirdParty"
+            android:src="@drawable/ic_qq" />
+
+        <ImageView
+            android:id="@+id/WeiBo"
+            style="@style/thirdParty"
+            android:src="@drawable/ic_weibo" />
+    </LinearLayout>
+
+
+</LinearLayout>

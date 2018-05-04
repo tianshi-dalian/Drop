@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.qhp334.drop.fragment.MvFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/search_mv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_search" />
+        <!--<Button-->
+            <!--android:id="@+id/find_mv"-->
+            <!--android:layout_width="40dp"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:background="@drawable/ic_issue" />-->
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:drawableTop="@drawable/select_netmusic"
+            android:id="@+id/radio_Music"
+            android:text="@string/mv_local_music"
+            android:button="@null"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            />
+
+        <RadioButton
+            android:drawableTop="@drawable/select_netmusic"
+            android:id="@+id/radio_oMusic"
+            android:text="@string/mv_online_music"
+            style="@style/Friend" />
+        <RadioButton
+            android:drawableTop="@drawable/select_video"
+            android:id="@+id/radio_Video2"
+            android:text="@string/mv_local_video"
+            style="@style/Friend" />
+
+    </RadioGroup>
+
+
+        <LinearLayout
+            android:id="@+id/liner"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_below="@+id/FRadioGroup"
+            android:gravity="center"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+
+                android:id="@+id/ll_music_color"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@color/unChecked"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_omusic_color"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@color/unChecked"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_video2_color"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="@color/unChecked"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_marginBottom="55dp"
+        android:id="@+id/fragment_mvHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/liner"
+        android:layout_marginTop="0dp" >
+    </FrameLayout>
+
+
+</LinearLayout>

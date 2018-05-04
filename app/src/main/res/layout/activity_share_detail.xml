@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.qhp334.drop.activity.ShareDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/r_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/back_d"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/ic_back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/r_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/uPic_d"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <TextView
+            android:id="@+id/uName_d"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/uPic_d"
+            android:gravity="center"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/createTime_d"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/uName_d"
+            />
+        <TextView
+
+            android:layout_below="@+id/uName_d"
+            android:id="@+id/title_d"
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+        <ImageView
+            android:layout_below="@+id/title_d"
+            android:id="@+id/imageView_d"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:scaleType="fitXY" />
+        <LinearLayout
+            android:id="@+id/comment_d"
+            android:orientation="horizontal"
+            android:layout_below="@id/imageView_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/fpd_comment"
+                android:layout_weight="1"
+                android:src="@drawable/ic_message"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/fpd_share"
+                android:layout_weight="1"
+                android:src="@drawable/ic_share"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/fpd_follow"
+                android:layout_weight="1"
+                android:src="@drawable/ic_follow"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_below="@+id/r_2"
+        android:id="@+id/S_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
+</LinearLayout>
