@@ -80,7 +80,9 @@ public class ShareFragment extends BaseFragment {
 
             @Override
             public void onFailure(Call<List<Share>> call, Throwable t) {
-                Toast.makeText(getActivity(), "error", Toast.LENGTH_SHORT).show();
+                if (null!=getActivity()){
+                    Toast.makeText(getActivity(), "error", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });

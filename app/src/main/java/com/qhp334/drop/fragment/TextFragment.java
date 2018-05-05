@@ -32,7 +32,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class TextFragment extends BaseFragment {
 
-    private RecyclerView titleRecyclerView ;
+    private RecyclerView titleRecyclerView;
     private TextListAdapter adapter2;
 
     private Retrofit retrofit;
@@ -53,23 +53,24 @@ public class TextFragment extends BaseFragment {
         call.enqueue(new Callback<List<TextBean>>() {
             @Override
             public void onResponse(Call<List<TextBean>> call, Response<List<TextBean>> response) {
-                if (getActivity() !=null){
-                    adapter2 = new TextListAdapter(getActivity(),response.body());
+                if (getActivity() != null) {
+                    adapter2 = new TextListAdapter(getActivity(), response.body());
                     LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
                     layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
                     titleRecyclerView.setLayoutManager(layoutManager);
                     titleRecyclerView.setAdapter(adapter2);
                     titleRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
-                }
-                else {
+                } else {
                     Toast.makeText(getActivity(), "没有记录", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
             public void onFailure(Call<List<TextBean>> call, Throwable t) {
-                Toast.makeText(getActivity(), "error", Toast.LENGTH_SHORT).show();
+                if (null != getActivity()) {
+                    Toast.makeText(getActivity(), "error", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
