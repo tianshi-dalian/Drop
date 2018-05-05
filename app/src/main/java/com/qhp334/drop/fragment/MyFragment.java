@@ -49,19 +49,20 @@ public class MyFragment extends Fragment {
 
     private ShareListAdapter adapter;
     private Retrofit retrofit;
-    private Context context;
 
 
     public MyFragment() {
         // Required empty public constructor
     }
-    public void retrofit(){
+
+    public void retrofit() {
         retrofit = new Retrofit.Builder()
                 .baseUrl(Const.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
     }
+
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         modButton = view.findViewById(R.id.mod_user);
@@ -77,13 +78,13 @@ public class MyFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), MyDetailActivity.class);
-                startActivityForResult(intent,1);
+                startActivityForResult(intent, 1);
             }
         });
         collectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),CollectActivity.class);
+                Intent intent = new Intent(getActivity(), CollectActivity.class);
                 startActivity(intent);
             }
         });
@@ -95,19 +96,20 @@ public class MyFragment extends Fragment {
         });
     }
 
-    private void getUser(String uid){
+    private void getUser(String uid) {
         retrofit();
-        RetrofitService retrofitService = retrofit.create(RetrofitService.class) ;
+        RetrofitService retrofitService = retrofit.create(RetrofitService.class);
         Call<UserMod> call = retrofitService.getuser(uid);
         call.enqueue(new Callback<UserMod>() {
             @Override
             public void onResponse(Call<UserMod> call, Response<UserMod> response) {
                 UserMod userMod = response.body();
-                if (userMod !=null){
-                    nameView.setText("昵称："+response.body().getUname());
-                    telephoneView.setText("账号："+response.body().getTelephone());
+                if (userMod != null) {
+                    nameView.setText("昵称：" + response.body().getUname());
+                    telephoneView.setText("账号：" + response.body().getTelephone());
 //                    picView.setVisibility();
-                    picView.setImageAlpha(Integer.parseInt(response.body().getPic()));
+//                    picView.setImageAlpha(Integer.parseInt(response.body().getPic()));
+                    Picasso.with(getActivity()).load("http://img.zcool.cn/community/01935d57b420380000018c1bc2c27e.jpg@2o.jpg").into(picView);
 //                    Picasso.with(context).load(Const.User_URL+picView).into(picView);
 
 //                    picView.setVisibility(View.VISIBLE);

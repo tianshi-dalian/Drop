@@ -21,14 +21,13 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+import com.qhp334.drop.R;
+import com.qhp334.drop.adapter.MainMusicAdapter;
+import com.qhp334.drop.bean.Song;
 import com.qhp334.drop.music.APPContext;
 import com.qhp334.drop.music.CollectDBHelper;
 import com.qhp334.drop.music.Constants;
 import com.qhp334.drop.music.MusicUtils;
-import com.qhp334.drop.R;
-import com.qhp334.drop.adapter.MainMusicAdapter;
-import com.qhp334.drop.bean.Song;
 
 import java.util.List;
 import java.util.Timer;
