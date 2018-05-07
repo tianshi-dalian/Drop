@@ -55,7 +55,7 @@ public interface RetrofitService {
     Call<UserUpdate> update_user(@Query("uid") String uid,
                                  @Query("uname") String uname,
                                  @Query("password") String password,
-                                 @Query("telephone") String phone
+                                 @Query("telephone") String telephone
 
     );
 }

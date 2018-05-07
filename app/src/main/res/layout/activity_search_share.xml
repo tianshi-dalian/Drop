@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FFEFD5"
     tools:context="com.qhp334.drop.activity.SearchShareActivity">
     <LinearLayout
         android:layout_width="match_parent"

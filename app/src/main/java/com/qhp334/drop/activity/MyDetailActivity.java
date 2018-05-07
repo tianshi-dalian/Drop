@@ -29,7 +29,7 @@ public class MyDetailActivity extends Activity {
 
     private EditText username;
     private EditText password1;
-    private EditText telephone;
+    private EditText phone;
     private ImageView pic;
     private Button modButton;
     private Button cancelButton;
@@ -43,7 +43,7 @@ public class MyDetailActivity extends Activity {
         context = MyDetailActivity.this;
         username = findViewById(R.id.new_name);
         password1 = findViewById(R.id.new_password);
-        telephone = findViewById(R.id.new_phone);
+        phone = findViewById(R.id.new_phone);
         modButton = findViewById(R.id.button_mod);
         cancelButton = findViewById(R.id.back_mod);
         pic = findViewById(R.id.uPic_uDetail);
@@ -52,11 +52,11 @@ public class MyDetailActivity extends Activity {
         modButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String name = username.getText().toString();
-                String pwd = password1.getText().toString();
-                String phone = telephone.getText().toString();
+                String uname = username.getText().toString();
+                String password = password1.getText().toString();
+                String telephone = phone.getText().toString();
                 Picasso.with(context).load(Const.User_URL).into(pic);
-                updateUserById(uId, name, pwd, phone);
+                updateUserById(uId, uname, password, telephone);
             }
         });
         cancelButton.setOnClickListener(new View.OnClickListener() {
@@ -81,7 +81,7 @@ public class MyDetailActivity extends Activity {
                 UserMod userMod = response.body();
                 if (userMod != null) {
                     username.setText(response.body().getUname());
-                    telephone.setText(response.body().getTelephone());
+                    phone.setText(response.body().getTelephone());
                     password1.setText(response.body().getPassword());
                     final String upicView = response.body().getPic();
                     Picasso.with(context).load(Const.User_URL+upicView).into(pic);
@@ -106,6 +106,7 @@ public class MyDetailActivity extends Activity {
             @Override
             public void onResponse(Call<UserUpdate> call, Response<UserUpdate> response) {
                 Toast.makeText(MyDetailActivity.this, "修改成功", Toast.LENGTH_SHORT).show();
+                finish();
             }
 
             @Override

@@ -62,7 +62,10 @@ public class TextFragment extends BaseFragment {
                     titleRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
                 } else {
-                    Toast.makeText(getActivity(), "没有记录", Toast.LENGTH_SHORT).show();
+                    if (null !=getActivity()){
+                        Toast.makeText(getActivity(), "没有记录", Toast.LENGTH_SHORT).show();
+                    }
+
                 }
             }
 

@@ -72,7 +72,7 @@ public class ShareFragment extends BaseFragment {
                     recyclerView.setAdapter(adapter);
                     recyclerView.setItemAnimator(new DefaultItemAnimator());
                 }
-//
+
 //                else {
 //                    Toast.makeText(getActivity(), "error1", Toast.LENGTH_SHORT).show();
 //                }

@@ -50,7 +50,7 @@ public class MainActivity extends BaseActivity {
         switch (intent.getIntExtra("tag", 10)) {
             case 10:
                 //显示登录页
-                Toast.makeText(this, "显示登录页面", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "退出登录！", Toast.LENGTH_SHORT).show();
                 showLoginFragment();
                 break;
             case 20:

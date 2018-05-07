@@ -77,7 +77,7 @@ public class LoginFragment extends BaseFragment {
         passwordView = view.findViewById(R.id.password_login);
         loginButton = view.findViewById(R.id.login_button);
         regButton = view.findViewById(R.id.register_button);
-        noLoginButton = view.findViewById(R.id.noLogin_login);
+//        noLoginButton = view.findViewById(R.id.noLogin_login);
 
         fragmentManager = getChildFragmentManager();
 
@@ -133,13 +133,8 @@ public class LoginFragment extends BaseFragment {
         });
 
 
-        noLoginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                Intent intent = new Intent(getActivity(), SearchFActivity.class);
-//                startActivityForResult(intent,1);
-            }
-        });
+
+
     }
     //添加获取返回值的回调方法
     @Override

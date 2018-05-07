@@ -9,6 +9,7 @@
     android:paddingRight="32dp"
     android:paddingTop="16dp"
     android:orientation="vertical"
+    android:background="#FFEFD5"
     tools:context="com.qhp334.drop.activity.RegisterActivity">
 
     <TextView

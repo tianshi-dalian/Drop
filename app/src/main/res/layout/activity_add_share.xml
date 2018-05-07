@@ -14,10 +14,10 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/Button"
-            android:text="取消" />
+            android:id="@+id/cancel_add"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/icon_back" />
 
         <Button
             android:id="@+id/text_addButton"

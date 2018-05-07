@@ -1,7 +1,6 @@
 package com.qhp334.drop.activity;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.qhp334.drop.R;
+import com.qhp334.drop.adapter.SearchShareAdapter;
 import com.qhp334.drop.adapter.ShareListAdapter;
 import com.qhp334.drop.bean.Share;
 import com.qhp334.drop.service.Const;
@@ -31,7 +31,7 @@ public class SearchShareActivity extends Activity {
     private Button backButton;
     private EditText searchText;
     private RecyclerView recyclerView;
-    private ShareListAdapter adapter;
+    private SearchShareAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,7 +67,7 @@ public class SearchShareActivity extends Activity {
         call.enqueue(new Callback<List<Share>>() {
             @Override
             public void onResponse(Call<List<Share>> call, Response<List<Share>> response) {
-                adapter = new ShareListAdapter(SearchShareActivity.this,response.body());
+                adapter = new SearchShareAdapter(SearchShareActivity.this,response.body());
                 LinearLayoutManager layoutManager = new LinearLayoutManager(SearchShareActivity.this);
                 layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
                 recyclerView.setLayoutManager(layoutManager);
