@@ -22,9 +22,9 @@ public class TextViewHolder extends RecyclerView.ViewHolder {
     public TextViewHolder(View itemView) {
         super(itemView);
         this.itemView = itemView;
-        uPicView = itemView.findViewById(R.id.uPic);
-        uNameView = itemView.findViewById(R.id.uName);
-        tDetailView = itemView.findViewById(R.id.textView_textDetail);
-        tCreateTimeView = itemView.findViewById(R.id.createTime);
+        uPicView = itemView.findViewById(R.id.uPic_text);
+        uNameView = itemView.findViewById(R.id.uName_text);
+        tDetailView = itemView.findViewById(R.id.textView_textDetail_text);
+        tCreateTimeView = itemView.findViewById(R.id.createTime_text);
     }
 }

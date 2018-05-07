@@ -33,7 +33,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class TextFragment extends BaseFragment {
 
     private RecyclerView titleRecyclerView;
-    private TextListAdapter adapter2;
+    private TextListAdapter adapter;
 
     private Retrofit retrofit;
 
@@ -54,11 +54,11 @@ public class TextFragment extends BaseFragment {
             @Override
             public void onResponse(Call<List<TextBean>> call, Response<List<TextBean>> response) {
                 if (getActivity() != null) {
-                    adapter2 = new TextListAdapter(getActivity(), response.body());
+                    adapter = new TextListAdapter(getActivity(), response.body());
                     LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
                     layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
                     titleRecyclerView.setLayoutManager(layoutManager);
-                    titleRecyclerView.setAdapter(adapter2);
+                    titleRecyclerView.setAdapter(adapter);
                     titleRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
                 } else {

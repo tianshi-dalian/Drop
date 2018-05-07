@@ -6,36 +6,36 @@
     android:padding="8dp">
     <ImageView
         android:src="@drawable/pic"
-        android:id="@+id/uPic"
+        android:id="@+id/uPic_text"
         android:layout_width="40dp"
         android:layout_height="40dp" />
 
     <TextView
         android:text="uName"
-        android:id="@+id/uName"
+        android:id="@+id/uName_text"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_toRightOf="@+id/uPic"
+        android:layout_toRightOf="@+id/uPic_text"
         android:gravity="center"
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/createTime"
+        android:id="@+id/createTime_text"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:gravity="center"
-        android:layout_toRightOf="@+id/uName"
+        android:layout_toRightOf="@+id/uName_text"
         />
     <TextView
-        android:layout_below="@+id/uName"
-        android:id="@+id/textView_textDetail"
+        android:layout_below="@+id/uName_text"
+        android:id="@+id/textView_textDetail_text"
         android:text="123"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <LinearLayout
         android:id="@+id/comment"
         android:orientation="horizontal"
-        android:layout_below="@id/textView_textDetail"
+        android:layout_below="@id/textView_textDetail_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageView

@@ -23,6 +23,7 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.qhp334.drop.R;
+import com.qhp334.drop.activity.AddShareActivity;
 import com.qhp334.drop.activity.SearchShareActivity;
 
 /**
@@ -64,7 +65,15 @@ public class FriendFragment extends Fragment {
         ll_share_color = view.findViewById(R.id.ll_share_color);
         ll_text_color = view.findViewById(R.id.ll_text_color);
 //        ll_video_color = view.findViewById(R.id.ll_video_color);
+        issueButton = view.findViewById(R.id.issue_friend);
         searchButton = view.findViewById(R.id.search_friend);
+        issueButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), AddShareActivity.class);
+                startActivity(intent);
+            }
+        });
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,6 +81,7 @@ public class FriendFragment extends Fragment {
                 startActivityForResult(intent,1);
             }
         });
+
 
         shareRadio.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -128,7 +138,7 @@ public class FriendFragment extends Fragment {
         shareRadio.setTextColor(getResources().getColor(R.color.unChecked));
         ll_share_color.setBackgroundColor(getResources().getColor(R.color.unChecked));
 
-
+//
 //        videoRadio.setTextColor(getResources().getColor(R.color.unChecked));
 //        ll_video_color.setBackgroundColor(getResources().getColor(R.color.unChecked));
 

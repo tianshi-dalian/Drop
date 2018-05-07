@@ -6,8 +6,15 @@
     android:layout_height="match_parent"
     android:padding="8dp"
     android:orientation="horizontal"
+    android:background="@drawable/back3"
     tools:context="com.qhp334.drop.activity.MyDetailActivity">
 
+    <ImageView
+        android:src="@drawable/ic_user"
+        android:id="@+id/uPic_uDetail"
+        android:layout_centerHorizontal="true"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
     <LinearLayout
         android:id="@+id/zhanghao"
         android:layout_width="match_parent"

@@ -46,15 +46,11 @@ public class ShareListAdapter extends RecyclerView.Adapter {
         final Share share = shareList.get(position);
 
         final String shareTitle =share.getSdetail();
-        final int shareId= share.getSid();
         final String shareuName = share.getUname();
-//        final String shareComment = share.;
         final String shareCreatetime = share.getCreatetime();
 
         final String sharePic = share.getSmedia();
         final String shareUpic = share.getPic();
-//        String sharePic = share.getSmedia();
-//        String shareUpic = share.getPic();
 
         viewHolder.shareTitleView.setText(shareCreatetime);
         viewHolder.shareTitleView.setText(shareTitle);

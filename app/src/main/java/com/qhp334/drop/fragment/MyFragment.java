@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.qhp334.drop.R;
 import com.qhp334.drop.activity.CollectActivity;
@@ -105,20 +106,11 @@ public class MyFragment extends Fragment {
             public void onResponse(Call<UserMod> call, Response<UserMod> response) {
                 UserMod userMod = response.body();
                 if (userMod != null) {
+                    final String upicView = response.body().getPic();
                     nameView.setText("昵称：" + response.body().getUname());
                     telephoneView.setText("账号：" + response.body().getTelephone());
-//                    picView.setVisibility();
-//                    picView.setImageAlpha(Integer.parseInt(response.body().getPic()));
-                    Picasso.with(getActivity()).load("http://img.zcool.cn/community/01935d57b420380000018c1bc2c27e.jpg@2o.jpg").into(picView);
-//                    Picasso.with(context).load(Const.User_URL+picView).into(picView);
-
-//                    picView.setVisibility(View.VISIBLE);
-//                    if (picView.equals("")){
-//                        Picasso.with(context).load(R.mipmap.ic_launcher_round).into(picView);
-//                    }else{
-//                        Picasso.with(context).load(Const.User_URL+picView).into(picView);
-//                    }
-
+//                    Picasso.with(getActivity()).load("http://img.zcool.cn/community/01935d57b420380000018c1bc2c27e.jpg@2o.jpg").into(picView);
+                    Picasso.with(getActivity()).load(Const.User_URL+upicView).into(picView);
                 }
             }
 

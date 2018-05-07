@@ -15,6 +15,7 @@ import com.qhp334.drop.bean.UserMod;
 import com.qhp334.drop.bean.UserUpdate;
 import com.qhp334.drop.service.Const;
 import com.qhp334.drop.service.RetrofitService;
+import com.squareup.picasso.Picasso;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -28,7 +29,6 @@ public class MyDetailActivity extends Activity {
 
     private EditText username;
     private EditText password1;
-    private EditText password2;
     private EditText telephone;
     private ImageView pic;
     private Button modButton;
@@ -46,6 +46,7 @@ public class MyDetailActivity extends Activity {
         telephone = findViewById(R.id.new_phone);
         modButton = findViewById(R.id.button_mod);
         cancelButton = findViewById(R.id.back_mod);
+        pic = findViewById(R.id.uPic_uDetail);
         getUserById(uId);
 
         modButton.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +55,7 @@ public class MyDetailActivity extends Activity {
                 String name = username.getText().toString();
                 String pwd = password1.getText().toString();
                 String phone = telephone.getText().toString();
+                Picasso.with(context).load(Const.User_URL).into(pic);
                 updateUserById(uId, name, pwd, phone);
             }
         });
@@ -81,6 +83,8 @@ public class MyDetailActivity extends Activity {
                     username.setText(response.body().getUname());
                     telephone.setText(response.body().getTelephone());
                     password1.setText(response.body().getPassword());
+                    final String upicView = response.body().getPic();
+                    Picasso.with(context).load(Const.User_URL+upicView).into(pic);
                 }
             }
 

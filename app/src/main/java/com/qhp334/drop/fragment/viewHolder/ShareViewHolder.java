@@ -26,12 +26,12 @@ public class ShareViewHolder extends RecyclerView.ViewHolder {
     public ShareViewHolder(View itemView) {
         super(itemView);
         this.itemView = itemView;
-        imageView =itemView.findViewById(R.id.imageView);
-        uPicView = itemView.findViewById(R.id.uPic_item);
+        imageView =itemView.findViewById(R.id.imageView_share);
+        uPicView = itemView.findViewById(R.id.uPic_item_share);
 
-        uNameView = itemView.findViewById(R.id.uName_item);
-        createTimeView = itemView.findViewById(R.id.createTime);
-        shareTitleView = itemView.findViewById(R.id.textView_share_title);
+        uNameView = itemView.findViewById(R.id.uName_item_share);
+        createTimeView = itemView.findViewById(R.id.createTime_item_share);
+        shareTitleView = itemView.findViewById(R.id.textView_share_title_share);
 
     }
 }
