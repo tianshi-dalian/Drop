@@ -17,14 +17,13 @@
     <string name="friend_video">视频</string>
     <string name="friend_pic">图片</string>
     <string name="friend_text">段子</string>
-
     <string name="friend_name">主题</string>
 
     <string name="myCollect">我的关注</string>
     <string name="myAttention">我的收藏</string>
     <string name="myFans">我的粉丝</string>
     <string name="myIssue">我的发布</string>
-    <string name="mySetting">退出程序</string>
+    <string name="mySetting">退出登陆</string>
 
     <string name="Register">注册</string>
     <string name="Login">登录</string>

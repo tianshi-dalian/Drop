@@ -20,22 +20,25 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <RadioButton
-            android:drawableTop="@drawable/select_live"
-            style="@style/CheckStyle"
-            android:id="@+id/radio_live"
-            android:text="@string/live"/>
-        <RadioButton
-            android:drawableTop="@drawable/select_mv"
-            style="@style/CheckStyle"
-            android:id="@+id/radio_mv"
-            android:text="@string/m_v"/>
 
         <RadioButton
             android:drawableTop="@drawable/select_home"
             style="@style/CheckStyle"
             android:id="@+id/radio_friend"
             android:text="@string/friend"/>
+        <RadioButton
+            android:drawableTop="@drawable/select_mv"
+            style="@style/CheckStyle"
+            android:id="@+id/radio_mv"
+            android:text="@string/m_v"/>
+        <RadioButton
+            android:drawableTop="@drawable/select_live"
+            style="@style/CheckStyle"
+            android:id="@+id/radio_live"
+            android:text="@string/live"/>
+
+
+
         <RadioButton
             android:drawableTop="@drawable/select_my"
             style="@style/CheckStyle"

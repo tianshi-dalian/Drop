@@ -44,7 +44,7 @@ public interface RetrofitService {
     @POST("Share/searchShare")
     Call<List<Share>> searchShare(@Query("sdetail") String sdetail);
 
-    @POST("TextBean/getAllText")
+    @POST("ShareText/getAllText")
     Call<List<TextBean>> getAllText();
 
     /*获取个人信息*/

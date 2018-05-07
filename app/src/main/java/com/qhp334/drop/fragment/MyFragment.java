@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.qhp334.drop.MainActivity;
 import com.qhp334.drop.R;
 import com.qhp334.drop.activity.CollectActivity;
 import com.qhp334.drop.activity.MyDetailActivity;
@@ -40,6 +43,7 @@ import static com.qhp334.drop.base.BaseActivity.uId;
  */
 public class MyFragment extends Fragment {
 
+    private LoginFragment loginFragment;
     private Button collectButton;
     private Button modButton;
     private Button exitButton;
@@ -51,6 +55,8 @@ public class MyFragment extends Fragment {
     private ShareListAdapter adapter;
     private Retrofit retrofit;
 
+    private FragmentManager fragmentManager;
+    private FragmentTransaction fragmentTransaction;
 
     public MyFragment() {
         // Required empty public constructor
@@ -92,7 +98,9 @@ public class MyFragment extends Fragment {
         exitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onDestroy();
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                intent.putExtra("tag", 10);
+                startActivity(intent);
             }
         });
     }
@@ -110,7 +118,7 @@ public class MyFragment extends Fragment {
                     nameView.setText("昵称：" + response.body().getUname());
                     telephoneView.setText("账号：" + response.body().getTelephone());
 //                    Picasso.with(getActivity()).load("http://img.zcool.cn/community/01935d57b420380000018c1bc2c27e.jpg@2o.jpg").into(picView);
-                    Picasso.with(getActivity()).load(Const.User_URL+upicView).into(picView);
+                    Picasso.with(getActivity()).load(Const.User_URL + upicView).into(picView);
                 }
             }
 

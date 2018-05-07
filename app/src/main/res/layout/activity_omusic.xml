@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFEFD5"
     tools:context="com.qhp334.drop.activity.OMusicActivity">
 
 </android.support.constraint.ConstraintLayout>

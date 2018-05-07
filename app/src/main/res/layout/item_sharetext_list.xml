@@ -1,59 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
     android:padding="8dp">
+
     <ImageView
-        android:src="@drawable/pic"
         android:id="@+id/uPic_text"
         android:layout_width="40dp"
-        android:layout_height="40dp" />
+        android:layout_height="40dp"
+        android:src="@drawable/pic" />
 
     <TextView
-        android:text="uName"
         android:id="@+id/uName_text"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_toRightOf="@+id/uPic_text"
         android:gravity="center"
+        android:text="uName"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/createTime_text"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:gravity="center"
         android:layout_toRightOf="@+id/uName_text"
-        />
+        android:gravity="center" />
+
     <TextView
-        android:layout_below="@+id/uName_text"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
         android:id="@+id/textView_textDetail_text"
-        android:text="123"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/uName_text"
+        android:text="123" />
+
     <LinearLayout
+        android:layout_marginTop="20dp"
         android:id="@+id/comment"
-        android:orientation="horizontal"
-        android:layout_below="@id/textView_textDetail_text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_textDetail_text"
+        android:orientation="horizontal">
+
         <ImageView
-            android:layout_weight="1"
-            android:src="@drawable/ic_message"
             android:layout_width="20dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_message" />
+
         <ImageView
-            android:layout_weight="1"
-            android:src="@drawable/ic_share"
             android:layout_width="20dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_share" />
+
         <ImageView
-            android:layout_weight="1"
-            android:src="@drawable/ic_follow"
             android:layout_width="20dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_follow" />
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"

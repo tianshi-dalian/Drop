@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:layout_centerInParent="true"
     android:layout_centerVertical="true"
-    android:background="@drawable/back3"
     android:gravity="center"
     android:orientation="vertical"
     tools:context="com.qhp334.drop.fragment.LocalFragment">

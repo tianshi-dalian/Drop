@@ -2,7 +2,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/back3"
     android:orientation="vertical"
     android:padding="16dp"
     tools:context="com.qhp334.drop.fragment.MyFragment">
@@ -85,11 +84,6 @@
             android:layout_height="1dp"
             android:layout_alignParentBottom="true"
             android:background="#f2f2f2" />
-        <Button
-            android:gravity="center_vertical"
-            android:id="@+id/myFans"
-            style="@style/My"
-            android:text="@string/myFans" />
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -105,6 +99,7 @@
             android:layout_height="1dp"
             android:layout_alignParentBottom="true"
             android:background="#f2f2f2" />
+
         <Button
             android:gravity="center_vertical"
             android:id="@+id/myExit"
